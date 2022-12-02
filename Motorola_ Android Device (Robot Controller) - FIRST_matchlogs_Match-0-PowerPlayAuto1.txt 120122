@@ -1,0 +1,501 @@
+--------- beginning of main
+12-01 21:28:23.292 20269 20350 V Robocol : received command: CMD_SET_MATCH_NUMBER(10821) 0
+12-01 21:28:23.300 20269 20350 V Robocol : received command: CMD_INIT_OP_MODE(10822) PowerPlayAuto1
+12-01 21:28:23.308 20269 20351 I RobotCore: ******************** START - OPMODE PowerPlayAuto1 ********************
+12-01 21:28:23.315 20269 20411 V RobotCore: thread: ...terminating 'OpModeThread'
+12-01 21:28:23.320 20269 20371 I RobotCore: Attempting to switch to op mode PowerPlayAuto1
+12-01 21:28:23.461 20269 20371 D HardwareMap: Clearing which device instances have been retrieved
+12-01 21:28:23.461 20269 20371 D HardwareMap: Clearing which device instances have been retrieved
+12-01 21:28:23.463 20269 20416 V RobotCore: thread: 'OpModeThread' starting...
+12-01 21:28:23.493 20269 20357 V Robocol : sending CMD_NOTIFY_INIT_OP_MODE(705), attempt: 0
+12-01 21:28:23.548 20269 20416 V BNO055  : Suppressing I2C warnings while we check for a BNO055 IMU
+12-01 21:28:23.553 20269 20416 V BNO055  : Found BNO055 IMU
+12-01 21:28:23.994 20269 20416 V BNO055IMU: Now polling until IMU comes out of reset. It is normal to see I2C failures below
+12-01 21:28:24.001 20269 20416 V RobotCore: addr=false data=true arb=false clock=false
+12-01 21:28:24.001 20269 20416 E LynxI2cDeviceSynch: readStatusQuery: cbExpected=1 cbRead=0
+12-01 21:28:24.002 20269 20416 E LynxI2cDeviceSynch: placeholder: readStatusQuery
+12-01 21:28:24.069 20269 20416 V RobotCore: addr=false data=true arb=false clock=false
+12-01 21:28:24.069 20269 20416 E LynxI2cDeviceSynch: readStatusQuery: cbExpected=1 cbRead=0
+12-01 21:28:24.237 20269 20416 V BNO055IMU: IMU has come out of reset. No more I2C failures should occur.
+12-01 21:28:24.294 20269 20360 V RobotCore: nack rec'd mod=1 msg#=240 ref#=0 reason=I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.295 20269 20416 E LynxI2cDeviceSynch: exception thrown during lynx communication
+12-01 21:28:24.296 20269 20416 E LynxI2cDeviceSynch: com.qualcomm.hardware.lynx.LynxNackException: (DQ168BDK #1) LynxI2cWriteStatusQueryCommand: nack received: I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.297 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.responseOrThrow(LynxRespondable.java:327)
+12-01 21:28:24.298 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.sendReceive(LynxRespondable.java:266)
+12-01 21:28:24.298 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.internalWaitForWriteCompletions(LynxI2cDeviceSynch.java:568)
+12-01 21:28:24.299 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch$6.get(LynxI2cDeviceSynch.java:405)
+12-01 21:28:24.299 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxModule.acquireI2cLockWhile(LynxModule.java:1855)
+12-01 21:28:24.300 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.acquireI2cLockWhile(LynxI2cDeviceSynch.java:550)
+12-01 21:28:24.300 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.internalWrite(LynxI2cDeviceSynch.java:400)
+12-01 21:28:24.301 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.write(LynxI2cDeviceSynch.java:375)
+12-01 21:28:24.301 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write(I2cDeviceSynchImplOnSimple.java:579)
+12-01 21:28:24.302 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write8(I2cDeviceSynchImplOnSimple.java:548)
+12-01 21:28:24.302 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:280)
+12-01 21:28:24.303 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.sharedInit(BNO055Util.java:71)
+12-01 21:28:24.303 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitializeOnce(BNO055IMUImpl.java:330)
+12-01 21:28:24.304 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:260)
+12-01 21:28:24.304 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.305 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters.initialize(I2cDeviceSynchDeviceWithParameters.java:64)
+12-01 21:28:24.305 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.initialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.306 20269 20416 E LynxI2cDeviceSynch: 	at org.firstinspires.ftc.teamcode.auton.PowerPlayAuto1.runOpMode(PowerPlayAuto1.java:1073)
+12-01 21:28:24.306 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.LinearOpMode.internalRunOpMode(LinearOpMode.java:169)
+12-01 21:28:24.307 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$1$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:180)
+12-01 21:28:24.307 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda1.run(D8$$SyntheticClass)
+12-01 21:28:24.308 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool.logThreadLifeCycle(ThreadPool.java:737)
+12-01 21:28:24.309 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$2$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:178)
+12-01 21:28:24.309 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda2.run(D8$$SyntheticClass)
+12-01 21:28:24.310 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+12-01 21:28:24.310 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+12-01 21:28:24.310 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool$ThreadFactoryImpl$1.run(ThreadPool.java:793)
+12-01 21:28:24.311 20269 20416 E LynxI2cDeviceSynch: 	at java.lang.Thread.run(Thread.java:761)
+12-01 21:28:24.365 20269 20360 V RobotCore: nack rec'd mod=1 msg#=3 ref#=0 reason=I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.366 20269 20416 E LynxI2cDeviceSynch: exception thrown during lynx communication
+12-01 21:28:24.368 20269 20416 E LynxI2cDeviceSynch: com.qualcomm.hardware.lynx.LynxNackException: (DQ168BDK #1) LynxI2cWriteMultipleBytesCommand: nack received: I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.369 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.throwIfNack(LynxRespondable.java:337)
+12-01 21:28:24.369 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.send(LynxRespondable.java:245)
+12-01 21:28:24.370 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.sendI2cTransaction(LynxI2cDeviceSynch.java:531)
+12-01 21:28:24.370 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch$6.get(LynxI2cDeviceSynch.java:404)
+12-01 21:28:24.371 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxModule.acquireI2cLockWhile(LynxModule.java:1855)
+12-01 21:28:24.372 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.acquireI2cLockWhile(LynxI2cDeviceSynch.java:550)
+12-01 21:28:24.372 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.internalWrite(LynxI2cDeviceSynch.java:400)
+12-01 21:28:24.373 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.write(LynxI2cDeviceSynch.java:375)
+12-01 21:28:24.374 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write(I2cDeviceSynchImplOnSimple.java:579)
+12-01 21:28:24.374 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write8(I2cDeviceSynchImplOnSimple.java:548)
+12-01 21:28:24.375 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:280)
+12-01 21:28:24.375 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:276)
+12-01 21:28:24.375 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.sharedInit(BNO055Util.java:83)
+12-01 21:28:24.376 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitializeOnce(BNO055IMUImpl.java:330)
+12-01 21:28:24.377 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:260)
+12-01 21:28:24.377 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.378 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters.initialize(I2cDeviceSynchDeviceWithParameters.java:64)
+12-01 21:28:24.378 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.initialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.379 20269 20416 E LynxI2cDeviceSynch: 	at org.firstinspires.ftc.teamcode.auton.PowerPlayAuto1.runOpMode(PowerPlayAuto1.java:1073)
+12-01 21:28:24.380 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.LinearOpMode.internalRunOpMode(LinearOpMode.java:169)
+12-01 21:28:24.380 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$1$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:180)
+12-01 21:28:24.381 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda1.run(D8$$SyntheticClass)
+12-01 21:28:24.381 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool.logThreadLifeCycle(ThreadPool.java:737)
+12-01 21:28:24.382 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$2$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:178)
+12-01 21:28:24.382 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda2.run(D8$$SyntheticClass)
+12-01 21:28:24.383 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+12-01 21:28:24.383 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+12-01 21:28:24.384 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool$ThreadFactoryImpl$1.run(ThreadPool.java:793)
+12-01 21:28:24.384 20269 20416 E LynxI2cDeviceSynch: 	at java.lang.Thread.run(Thread.java:761)
+12-01 21:28:24.440 20269 20360 V RobotCore: nack rec'd mod=1 msg#=21 ref#=0 reason=I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.442 20269 20416 E LynxI2cDeviceSynch: exception thrown during lynx communication
+12-01 21:28:24.444 20269 20416 E LynxI2cDeviceSynch: com.qualcomm.hardware.lynx.LynxNackException: (DQ168BDK #1) LynxI2cWriteMultipleBytesCommand: nack received: I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.445 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.throwIfNack(LynxRespondable.java:337)
+12-01 21:28:24.445 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.send(LynxRespondable.java:245)
+12-01 21:28:24.446 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.sendI2cTransaction(LynxI2cDeviceSynch.java:531)
+12-01 21:28:24.447 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch$6.get(LynxI2cDeviceSynch.java:404)
+12-01 21:28:24.447 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxModule.acquireI2cLockWhile(LynxModule.java:1855)
+12-01 21:28:24.448 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.acquireI2cLockWhile(LynxI2cDeviceSynch.java:550)
+12-01 21:28:24.448 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.internalWrite(LynxI2cDeviceSynch.java:400)
+12-01 21:28:24.449 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.write(LynxI2cDeviceSynch.java:375)
+12-01 21:28:24.449 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write(I2cDeviceSynchImplOnSimple.java:579)
+12-01 21:28:24.450 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write8(I2cDeviceSynchImplOnSimple.java:548)
+12-01 21:28:24.451 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:280)
+12-01 21:28:24.451 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:276)
+12-01 21:28:24.452 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.sharedInit(BNO055Util.java:87)
+12-01 21:28:24.452 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitializeOnce(BNO055IMUImpl.java:330)
+12-01 21:28:24.453 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:260)
+12-01 21:28:24.454 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.454 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters.initialize(I2cDeviceSynchDeviceWithParameters.java:64)
+12-01 21:28:24.455 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.initialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.456 20269 20416 E LynxI2cDeviceSynch: 	at org.firstinspires.ftc.teamcode.auton.PowerPlayAuto1.runOpMode(PowerPlayAuto1.java:1073)
+12-01 21:28:24.456 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.LinearOpMode.internalRunOpMode(LinearOpMode.java:169)
+12-01 21:28:24.457 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$1$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:180)
+12-01 21:28:24.458 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda1.run(D8$$SyntheticClass)
+12-01 21:28:24.458 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool.logThreadLifeCycle(ThreadPool.java:737)
+12-01 21:28:24.459 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$2$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:178)
+12-01 21:28:24.460 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda2.run(D8$$SyntheticClass)
+12-01 21:28:24.460 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+12-01 21:28:24.461 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+12-01 21:28:24.461 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool$ThreadFactoryImpl$1.run(ThreadPool.java:793)
+12-01 21:28:24.462 20269 20416 E LynxI2cDeviceSynch: 	at java.lang.Thread.run(Thread.java:761)
+12-01 21:28:24.518 20269 20360 V RobotCore: nack rec'd mod=1 msg#=40 ref#=0 reason=I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.518 20269 20416 E LynxI2cDeviceSynch: exception thrown during lynx communication
+12-01 21:28:24.520 20269 20416 E LynxI2cDeviceSynch: com.qualcomm.hardware.lynx.LynxNackException: (DQ168BDK #1) LynxI2cWriteMultipleBytesCommand: nack received: I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.521 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.throwIfNack(LynxRespondable.java:337)
+12-01 21:28:24.521 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.send(LynxRespondable.java:245)
+12-01 21:28:24.522 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.sendI2cTransaction(LynxI2cDeviceSynch.java:531)
+12-01 21:28:24.522 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch$6.get(LynxI2cDeviceSynch.java:404)
+12-01 21:28:24.522 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxModule.acquireI2cLockWhile(LynxModule.java:1855)
+12-01 21:28:24.523 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.acquireI2cLockWhile(LynxI2cDeviceSynch.java:550)
+12-01 21:28:24.523 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.internalWrite(LynxI2cDeviceSynch.java:400)
+12-01 21:28:24.524 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.write(LynxI2cDeviceSynch.java:375)
+12-01 21:28:24.524 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write(I2cDeviceSynchImplOnSimple.java:579)
+12-01 21:28:24.525 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write8(I2cDeviceSynchImplOnSimple.java:548)
+12-01 21:28:24.525 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:280)
+12-01 21:28:24.526 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:276)
+12-01 21:28:24.527 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.sharedInit(BNO055Util.java:93)
+12-01 21:28:24.527 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitializeOnce(BNO055IMUImpl.java:330)
+12-01 21:28:24.528 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:260)
+12-01 21:28:24.528 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.529 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters.initialize(I2cDeviceSynchDeviceWithParameters.java:64)
+12-01 21:28:24.529 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.initialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.530 20269 20416 E LynxI2cDeviceSynch: 	at org.firstinspires.ftc.teamcode.auton.PowerPlayAuto1.runOpMode(PowerPlayAuto1.java:1073)
+12-01 21:28:24.531 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.LinearOpMode.internalRunOpMode(LinearOpMode.java:169)
+12-01 21:28:24.531 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$1$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:180)
+12-01 21:28:24.532 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda1.run(D8$$SyntheticClass)
+12-01 21:28:24.532 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool.logThreadLifeCycle(ThreadPool.java:737)
+12-01 21:28:24.533 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$2$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:178)
+12-01 21:28:24.534 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda2.run(D8$$SyntheticClass)
+12-01 21:28:24.534 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+12-01 21:28:24.535 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+12-01 21:28:24.535 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool$ThreadFactoryImpl$1.run(ThreadPool.java:793)
+12-01 21:28:24.535 20269 20416 E LynxI2cDeviceSynch: 	at java.lang.Thread.run(Thread.java:761)
+12-01 21:28:24.590 20269 20360 V RobotCore: nack rec'd mod=1 msg#=58 ref#=0 reason=I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.591 20269 20416 E LynxI2cDeviceSynch: exception thrown during lynx communication
+12-01 21:28:24.592 20269 20416 E LynxI2cDeviceSynch: com.qualcomm.hardware.lynx.LynxNackException: (DQ168BDK #1) LynxI2cWriteMultipleBytesCommand: nack received: I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.593 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.throwIfNack(LynxRespondable.java:337)
+12-01 21:28:24.594 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.send(LynxRespondable.java:245)
+12-01 21:28:24.594 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.sendI2cTransaction(LynxI2cDeviceSynch.java:531)
+12-01 21:28:24.594 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch$6.get(LynxI2cDeviceSynch.java:404)
+12-01 21:28:24.595 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxModule.acquireI2cLockWhile(LynxModule.java:1855)
+12-01 21:28:24.595 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.acquireI2cLockWhile(LynxI2cDeviceSynch.java:550)
+12-01 21:28:24.595 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.internalWrite(LynxI2cDeviceSynch.java:400)
+12-01 21:28:24.596 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.write(LynxI2cDeviceSynch.java:375)
+12-01 21:28:24.596 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write(I2cDeviceSynchImplOnSimple.java:579)
+12-01 21:28:24.597 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write8(I2cDeviceSynchImplOnSimple.java:548)
+12-01 21:28:24.597 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:280)
+12-01 21:28:24.597 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:276)
+12-01 21:28:24.597 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.sharedInit(BNO055Util.java:95)
+12-01 21:28:24.598 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitializeOnce(BNO055IMUImpl.java:330)
+12-01 21:28:24.598 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:260)
+12-01 21:28:24.599 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.599 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters.initialize(I2cDeviceSynchDeviceWithParameters.java:64)
+12-01 21:28:24.599 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.initialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.600 20269 20416 E LynxI2cDeviceSynch: 	at org.firstinspires.ftc.teamcode.auton.PowerPlayAuto1.runOpMode(PowerPlayAuto1.java:1073)
+12-01 21:28:24.600 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.LinearOpMode.internalRunOpMode(LinearOpMode.java:169)
+12-01 21:28:24.601 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$1$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:180)
+12-01 21:28:24.601 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda1.run(D8$$SyntheticClass)
+12-01 21:28:24.601 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool.logThreadLifeCycle(ThreadPool.java:737)
+12-01 21:28:24.602 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$2$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:178)
+12-01 21:28:24.602 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda2.run(D8$$SyntheticClass)
+12-01 21:28:24.602 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+12-01 21:28:24.603 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+12-01 21:28:24.603 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool$ThreadFactoryImpl$1.run(ThreadPool.java:793)
+12-01 21:28:24.603 20269 20416 E LynxI2cDeviceSynch: 	at java.lang.Thread.run(Thread.java:761)
+12-01 21:28:24.657 20269 20360 V RobotCore: nack rec'd mod=1 msg#=75 ref#=0 reason=I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.658 20269 20416 E LynxI2cDeviceSynch: exception thrown during lynx communication
+12-01 21:28:24.659 20269 20416 E LynxI2cDeviceSynch: com.qualcomm.hardware.lynx.LynxNackException: (DQ168BDK #1) LynxI2cWriteMultipleBytesCommand: nack received: I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.660 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.throwIfNack(LynxRespondable.java:337)
+12-01 21:28:24.660 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.send(LynxRespondable.java:245)
+12-01 21:28:24.661 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.sendI2cTransaction(LynxI2cDeviceSynch.java:531)
+12-01 21:28:24.661 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch$6.get(LynxI2cDeviceSynch.java:404)
+12-01 21:28:24.661 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxModule.acquireI2cLockWhile(LynxModule.java:1855)
+12-01 21:28:24.662 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.acquireI2cLockWhile(LynxI2cDeviceSynch.java:550)
+12-01 21:28:24.662 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.internalWrite(LynxI2cDeviceSynch.java:400)
+12-01 21:28:24.662 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.write(LynxI2cDeviceSynch.java:375)
+12-01 21:28:24.663 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write(I2cDeviceSynchImplOnSimple.java:579)
+12-01 21:28:24.664 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write8(I2cDeviceSynchImplOnSimple.java:548)
+12-01 21:28:24.664 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:280)
+12-01 21:28:24.664 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:276)
+12-01 21:28:24.665 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.sharedInit(BNO055Util.java:99)
+12-01 21:28:24.665 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitializeOnce(BNO055IMUImpl.java:330)
+12-01 21:28:24.665 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:260)
+12-01 21:28:24.666 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.666 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters.initialize(I2cDeviceSynchDeviceWithParameters.java:64)
+12-01 21:28:24.666 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.initialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.667 20269 20416 E LynxI2cDeviceSynch: 	at org.firstinspires.ftc.teamcode.auton.PowerPlayAuto1.runOpMode(PowerPlayAuto1.java:1073)
+12-01 21:28:24.667 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.LinearOpMode.internalRunOpMode(LinearOpMode.java:169)
+12-01 21:28:24.668 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$1$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:180)
+12-01 21:28:24.668 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda1.run(D8$$SyntheticClass)
+12-01 21:28:24.668 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool.logThreadLifeCycle(ThreadPool.java:737)
+12-01 21:28:24.669 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$2$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:178)
+12-01 21:28:24.669 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda2.run(D8$$SyntheticClass)
+12-01 21:28:24.670 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+12-01 21:28:24.670 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+12-01 21:28:24.670 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool$ThreadFactoryImpl$1.run(ThreadPool.java:793)
+12-01 21:28:24.671 20269 20416 E LynxI2cDeviceSynch: 	at java.lang.Thread.run(Thread.java:761)
+12-01 21:28:24.725 20269 20360 V RobotCore: nack rec'd mod=1 msg#=92 ref#=0 reason=I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.726 20269 20416 E LynxI2cDeviceSynch: exception thrown during lynx communication
+12-01 21:28:24.728 20269 20416 E LynxI2cDeviceSynch: com.qualcomm.hardware.lynx.LynxNackException: (DQ168BDK #1) LynxI2cWriteReadMultipleBytesCommand: nack received: I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.730 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.throwIfNack(LynxRespondable.java:337)
+12-01 21:28:24.730 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.send(LynxRespondable.java:245)
+12-01 21:28:24.731 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.sendI2cTransaction(LynxI2cDeviceSynch.java:531)
+12-01 21:28:24.731 20269 20371 D RobotCore: system telemetry: key=$System$Warning$ msg="Error communicating with I2C device(s) 'imu'. Check your wiring and configuration.
+12-01 21:28:24.731 20269 20371 D RobotCore: 
+12-01 21:28:24.731 20269 20371 D RobotCore: Both the Robot Controller and Driver Station support 5 GHz. You should consider selecting a specific 5 GHz Wi-Fi channel (auto generally selects a 2.4 GHz channel)."
+12-01 21:28:24.731 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV2$2.get(LynxI2cDeviceSynchV2.java:70)
+12-01 21:28:24.732 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV2$2.get(LynxI2cDeviceSynchV2.java:67)
+12-01 21:28:24.732 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxModule.acquireI2cLockWhile(LynxModule.java:1855)
+12-01 21:28:24.733 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.acquireI2cLockWhile(LynxI2cDeviceSynch.java:550)
+12-01 21:28:24.734 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV2.readTimeStamped(LynxI2cDeviceSynchV2.java:66)
+12-01 21:28:24.734 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.readTimeStamped(I2cDeviceSynchImplOnSimple.java:524)
+12-01 21:28:24.735 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.read(I2cDeviceSynchImplOnSimple.java:484)
+12-01 21:28:24.735 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.read8(I2cDeviceSynchImplOnSimple.java:472)
+12-01 21:28:24.736 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.read8(BNO055Util.java:268)
+12-01 21:28:24.736 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.getSensorMode(BNO055Util.java:222)
+12-01 21:28:24.737 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.setSensorMode(BNO055Util.java:202)
+12-01 21:28:24.737 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.sharedInit(BNO055Util.java:117)
+12-01 21:28:24.738 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitializeOnce(BNO055IMUImpl.java:330)
+12-01 21:28:24.738 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:260)
+12-01 21:28:24.739 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.740 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters.initialize(I2cDeviceSynchDeviceWithParameters.java:64)
+12-01 21:28:24.741 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.initialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.741 20269 20416 E LynxI2cDeviceSynch: 	at org.firstinspires.ftc.teamcode.auton.PowerPlayAuto1.runOpMode(PowerPlayAuto1.java:1073)
+12-01 21:28:24.742 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.LinearOpMode.internalRunOpMode(LinearOpMode.java:169)
+12-01 21:28:24.743 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$1$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:180)
+12-01 21:28:24.743 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda1.run(D8$$SyntheticClass)
+12-01 21:28:24.744 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool.logThreadLifeCycle(ThreadPool.java:737)
+12-01 21:28:24.744 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$2$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:178)
+12-01 21:28:24.744 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda2.run(D8$$SyntheticClass)
+12-01 21:28:24.745 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+12-01 21:28:24.745 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+12-01 21:28:24.745 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool$ThreadFactoryImpl$1.run(ThreadPool.java:793)
+12-01 21:28:24.745 20269 20416 E LynxI2cDeviceSynch: 	at java.lang.Thread.run(Thread.java:761)
+12-01 21:28:24.745 20269 20416 E LynxI2cDeviceSynch: placeholder: readTimestamped
+12-01 21:28:24.748 20269 20361 D SoundPlayer: playing volume=0.000000 samp=3|ms=2509
+12-01 21:28:24.773 20269 20357 V Robocol : sending CMD_PLAY_SOUND(721), attempt: 0
+12-01 21:28:24.800 20269 20360 V RobotCore: nack rec'd mod=1 msg#=108 ref#=0 reason=I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.801 20269 20416 E LynxI2cDeviceSynch: exception thrown during lynx communication
+12-01 21:28:24.802 20269 20416 E LynxI2cDeviceSynch: com.qualcomm.hardware.lynx.LynxNackException: (DQ168BDK #1) LynxI2cWriteStatusQueryCommand: nack received: I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.803 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.responseOrThrow(LynxRespondable.java:327)
+12-01 21:28:24.803 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.sendReceive(LynxRespondable.java:266)
+12-01 21:28:24.803 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.internalWaitForWriteCompletions(LynxI2cDeviceSynch.java:568)
+12-01 21:28:24.804 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch$6.get(LynxI2cDeviceSynch.java:405)
+12-01 21:28:24.804 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxModule.acquireI2cLockWhile(LynxModule.java:1855)
+12-01 21:28:24.804 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.acquireI2cLockWhile(LynxI2cDeviceSynch.java:550)
+12-01 21:28:24.804 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.internalWrite(LynxI2cDeviceSynch.java:400)
+12-01 21:28:24.804 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.write(LynxI2cDeviceSynch.java:375)
+12-01 21:28:24.805 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write(I2cDeviceSynchImplOnSimple.java:579)
+12-01 21:28:24.805 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.write8(I2cDeviceSynchImplOnSimple.java:548)
+12-01 21:28:24.805 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.write8(BNO055Util.java:280)
+12-01 21:28:24.805 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.setSensorMode(BNO055Util.java:207)
+12-01 21:28:24.806 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.sharedInit(BNO055Util.java:117)
+12-01 21:28:24.806 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitializeOnce(BNO055IMUImpl.java:330)
+12-01 21:28:24.806 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:260)
+12-01 21:28:24.807 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.807 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters.initialize(I2cDeviceSynchDeviceWithParameters.java:64)
+12-01 21:28:24.807 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.initialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.807 20269 20416 E LynxI2cDeviceSynch: 	at org.firstinspires.ftc.teamcode.auton.PowerPlayAuto1.runOpMode(PowerPlayAuto1.java:1073)
+12-01 21:28:24.808 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.LinearOpMode.internalRunOpMode(LinearOpMode.java:169)
+12-01 21:28:24.808 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$1$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:180)
+12-01 21:28:24.808 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda1.run(D8$$SyntheticClass)
+12-01 21:28:24.808 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool.logThreadLifeCycle(ThreadPool.java:737)
+12-01 21:28:24.809 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$2$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:178)
+12-01 21:28:24.809 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda2.run(D8$$SyntheticClass)
+12-01 21:28:24.809 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+12-01 21:28:24.810 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+12-01 21:28:24.810 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool$ThreadFactoryImpl$1.run(ThreadPool.java:793)
+12-01 21:28:24.810 20269 20416 E LynxI2cDeviceSynch: 	at java.lang.Thread.run(Thread.java:761)
+12-01 21:28:24.880 20269 20360 V RobotCore: nack rec'd mod=1 msg#=126 ref#=0 reason=I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.881 20269 20416 E LynxI2cDeviceSynch: exception thrown during lynx communication
+12-01 21:28:24.882 20269 20416 E LynxI2cDeviceSynch: com.qualcomm.hardware.lynx.LynxNackException: (DQ168BDK #1) LynxI2cReadStatusQueryCommand: nack received: I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.883 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.responseOrThrow(LynxRespondable.java:327)
+12-01 21:28:24.884 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.sendReceive(LynxRespondable.java:266)
+12-01 21:28:24.884 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.pollForReadResult(LynxI2cDeviceSynch.java:613)
+12-01 21:28:24.884 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV2$2.get(LynxI2cDeviceSynchV2.java:73)
+12-01 21:28:24.885 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV2$2.get(LynxI2cDeviceSynchV2.java:67)
+12-01 21:28:24.885 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxModule.acquireI2cLockWhile(LynxModule.java:1855)
+12-01 21:28:24.885 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.acquireI2cLockWhile(LynxI2cDeviceSynch.java:550)
+12-01 21:28:24.885 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV2.readTimeStamped(LynxI2cDeviceSynchV2.java:66)
+12-01 21:28:24.886 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.readTimeStamped(I2cDeviceSynchImplOnSimple.java:524)
+12-01 21:28:24.886 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.read(I2cDeviceSynchImplOnSimple.java:484)
+12-01 21:28:24.887 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.read8(I2cDeviceSynchImplOnSimple.java:472)
+12-01 21:28:24.887 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.read8(BNO055Util.java:268)
+12-01 21:28:24.887 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055Util.getSystemStatus(BNO055Util.java:151)
+12-01 21:28:24.888 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.getSystemStatus(BNO055IMUImpl.java:359)
+12-01 21:28:24.888 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitializeOnce(BNO055IMUImpl.java:339)
+12-01 21:28:24.888 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:260)
+12-01 21:28:24.889 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.internalInitialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.889 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters.initialize(I2cDeviceSynchDeviceWithParameters.java:64)
+12-01 21:28:24.889 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.initialize(BNO055IMUImpl.java:82)
+12-01 21:28:24.890 20269 20416 E LynxI2cDeviceSynch: 	at org.firstinspires.ftc.teamcode.auton.PowerPlayAuto1.runOpMode(PowerPlayAuto1.java:1073)
+12-01 21:28:24.890 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.LinearOpMode.internalRunOpMode(LinearOpMode.java:169)
+12-01 21:28:24.891 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$1$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:180)
+12-01 21:28:24.891 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda1.run(D8$$SyntheticClass)
+12-01 21:28:24.892 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool.logThreadLifeCycle(ThreadPool.java:737)
+12-01 21:28:24.892 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$2$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:178)
+12-01 21:28:24.893 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda2.run(D8$$SyntheticClass)
+12-01 21:28:24.893 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+12-01 21:28:24.893 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+12-01 21:28:24.894 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool$ThreadFactoryImpl$1.run(ThreadPool.java:793)
+12-01 21:28:24.894 20269 20416 E LynxI2cDeviceSynch: 	at java.lang.Thread.run(Thread.java:761)
+12-01 21:28:24.894 20269 20416 E LynxI2cDeviceSynch: placeholder: readStatusQuery
+12-01 21:28:24.895 20269 20416 E RobotCore: Marking I2C device LynxEmbeddedIMU USB DQ168BDK; module 1; bus 0; addr7=0x28 as unhealthy because initialization failed
+12-01 21:28:24.950 20269 20360 V RobotCore: nack rec'd mod=1 msg#=144 ref#=0 reason=I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.951 20269 20416 E LynxI2cDeviceSynch: exception thrown during lynx communication
+12-01 21:28:24.952 20269 20416 E LynxI2cDeviceSynch: com.qualcomm.hardware.lynx.LynxNackException: (DQ168BDK #1) LynxI2cReadStatusQueryCommand: nack received: I2C_TIMEOUT_SCK_STUCK:45
+12-01 21:28:24.953 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.responseOrThrow(LynxRespondable.java:327)
+12-01 21:28:24.953 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.commands.LynxRespondable.sendReceive(LynxRespondable.java:266)
+12-01 21:28:24.953 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.pollForReadResult(LynxI2cDeviceSynch.java:613)
+12-01 21:28:24.954 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV2$2.get(LynxI2cDeviceSynchV2.java:73)
+12-01 21:28:24.954 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV2$2.get(LynxI2cDeviceSynchV2.java:67)
+12-01 21:28:24.954 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxModule.acquireI2cLockWhile(LynxModule.java:1855)
+12-01 21:28:24.954 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynch.acquireI2cLockWhile(LynxI2cDeviceSynch.java:550)
+12-01 21:28:24.955 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV2.readTimeStamped(LynxI2cDeviceSynchV2.java:66)
+12-01 21:28:24.955 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple.readTimeStamped(I2cDeviceSynchImplOnSimple.java:524)
+12-01 21:28:24.955 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.getVector(BNO055IMUImpl.java:654)
+12-01 21:28:24.956 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.getAngularOrientation(BNO055IMUImpl.java:572)
+12-01 21:28:24.956 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.hardware.bosch.BNO055IMUImpl.getAngularOrientation(BNO055IMUImpl.java:437)
+12-01 21:28:24.956 20269 20416 E LynxI2cDeviceSynch: 	at org.firstinspires.ftc.teamcode.auton.PowerPlayAuto1.runOpMode(PowerPlayAuto1.java:1074)
+12-01 21:28:24.957 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.LinearOpMode.internalRunOpMode(LinearOpMode.java:169)
+12-01 21:28:24.957 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$1$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:180)
+12-01 21:28:24.958 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda1.run(D8$$SyntheticClass)
+12-01 21:28:24.958 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool.logThreadLifeCycle(ThreadPool.java:737)
+12-01 21:28:24.958 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal.lambda$internalInit$2$com-qualcomm-robotcore-eventloop-opmode-OpModeInternal(OpModeInternal.java:178)
+12-01 21:28:24.959 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.eventloop.opmode.OpModeInternal$$ExternalSyntheticLambda2.run(D8$$SyntheticClass)
+12-01 21:28:24.959 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+12-01 21:28:24.959 20269 20416 E LynxI2cDeviceSynch: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+12-01 21:28:24.959 20269 20416 E LynxI2cDeviceSynch: 	at com.qualcomm.robotcore.util.ThreadPool$ThreadFactoryImpl$1.run(ThreadPool.java:793)
+12-01 21:28:24.960 20269 20416 E LynxI2cDeviceSynch: 	at java.lang.Thread.run(Thread.java:761)
+12-01 21:28:24.961 20269 20416 I System.out: OpenCvCameraBase ctor: EasyOpenCV version 1.5.2
+12-01 21:28:24.963 20269 20416 D AprilTagDetectorJNI: Creating 36h11 tag family
+12-01 21:28:24.963 20269 20416 D AprilTagDetectorJNI: Initializing april tag detector
+12-01 21:28:24.972 20269 20357 V Robocol : sending CMD_STREAM_CHANGE(724), attempt: 0
+12-01 21:28:24.988 20269 20269 D OpenCvViewport: surfaceCreated()
+12-01 21:28:24.988 20269 20269 D OpenCvViewport: ...surfaceCreated()
+12-01 21:28:24.988 20269 20269 D OpenCvViewport: surfaceChanged()
+12-01 21:28:24.988 20269 20269 D OpenCvViewport: CheckState(): user requested that we deactivate
+12-01 21:28:24.988 20269 20269 D OpenCvViewport: CheckState(): already deactivated
+12-01 21:28:24.989 20269 20269 D OpenCvViewport: ...surfaceChanged()
+12-01 21:28:25.150 20269 20416 D AprilTagDetectorJNI: Initializing april tag JNI context object
+12-01 21:28:25.152 20269 20417 D CameraManager: doOpenCamera()...
+12-01 21:28:25.152 20269 20417 D CameraManager: requesting permission for camera: Webcam(688D709F)
+12-01 21:28:25.154 20269 20417 D WebcamNameImpl: requesting permission for /dev/bus/usb/001/006
+12-01 21:28:25.154 20269 20417 V WebcamNameImpl: asyncRequestUsbPermission()...
+12-01 21:28:25.155 20395 20395 W com.qualcomm.ftcrobotcontroller: type=1400 audit(0.0:216): avc: denied { search } for uid=10139 comm=64656661756C742074687265616470 name="usb" dev="tmpfs" ino=18711 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:usb_device:s0 tclass=dir permissive=0
+12-01 21:28:25.156 20269 20417 D WebcamNameImpl: permission already available for /dev/bus/usb/001/006
+12-01 21:28:25.156 20269 20417 V WebcamNameImpl: ...asyncRequestUsbPermission()
+12-01 21:28:25.156 20269 20417 D ContinuationSynchronizer: awaiting(camera open)...
+12-01 21:28:25.156 20269 20395 D WebcamNameImpl: permission for /dev/bus/usb/001/006=true
+12-01 21:28:25.156 20269 20395 D CameraManager: permission granted for camera: Webcam(688D709F)
+12-01 21:28:25.156 20269 20395 D CameraManager: asyncOpenCamera(Webcam(688D709F))...
+12-01 21:28:25.156 20269 20395 D CameraManager: asyncOpenWebcam(Webcam(688D709F))...
+12-01 21:28:25.156 20269 20395 V UsbResiliantWebcam: construct(0x0731247c)
+12-01 21:28:25.157 20269 20395 D UsbResiliantWebcam: openAssumingPermission()...
+12-01 21:28:25.158 20269 20395 D UvcContext: usb device is *not* UVC compatible, /dev/bus/usb/001/005
+12-01 21:28:25.158 20269 20395 D UvcContext: found webcam: usbPath=/dev/bus/usb/001/006 vid=0x46D pid=0x8E5 serial=688D709F product=HD Pro Webcam C920
+12-01 21:28:25.158 20269 20395 D Uvc     : [jni_context.cpp:120] Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcContext_nativeCreateUvcDevice()...
+12-01 21:28:25.158 20269 20395 V Uvc     : API: Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcContext_nativeCreateUvcDevice: enter...
+12-01 21:28:25.158 20269 20395 D libusb  : [34.387779] [00004fab] libusb: debug [op_create] op_create: szUsbPath=/dev/bus/usb/001/006 szSysfsDir=(null)
+12-01 21:28:25.158 20269 20395 D libusb  : [34.387832] [00004fab] libusb: debug [initialize_device] initialize_device(szUsbPath=/dev/bus/usb/001/006 szSysfsDir=(null))
+12-01 21:28:25.158 20269 20395 E libusb  : [34.387928] [00004fab] libusb: error [initialize_device] initialize_device(): fdDescriptors unavailable
+12-01 21:28:25.158 20269 20395 D libusb  : [34.387950] [00004fab] libusb: debug [_originate_err] [linux_usbfs.c:796] originating err: -12(LIBUSB_ERROR_NOT_SUPPORTED)
+12-01 21:28:25.158 20269 20395 D Uvc     : [device.cpp:613] uvc_create_uvc_device()...
+12-01 21:28:25.158 20269 20395 D Uvc     : [libuvc/libuvc_internal.h:346] uvc_device::uvc_device()...
+12-01 21:28:25.158 20269 20395 D libusb  : [34.388003] [00004fab] libusb: debug [_originate_err] [descriptor.c:543] originating err: -5(LIBUSB_ERROR_NOT_FOUND)
+12-01 21:28:25.158 20269 20395 D Uvc     : [libuvc/libuvc_internal.h:346] ...uvc_device::uvc_device()
+12-01 21:28:25.158 20269 20395 D Uvc     : [device.cpp:613] ...uvc_create_uvc_device() rc=0
+12-01 21:28:25.158 20269 20395 V Uvc     : API: Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcContext_nativeCreateUvcDevice: ...exit
+12-01 21:28:25.158 20269 20395 D Uvc     : [jni_context.cpp:120] ...Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcContext_nativeCreateUvcDevice()
+12-01 21:28:25.158 20269 20395 V UvcDevice: construct(pointer=0x7f696878|null)
+12-01 21:28:25.159 20269 20395 D Uvc     : [jni_device.cpp:108] Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDevice_nativeGetLibUsbDevice()...
+12-01 21:28:25.159 20269 20395 D Uvc     : [jni_device.cpp:108] ...Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDevice_nativeGetLibUsbDevice()
+12-01 21:28:25.159 20269 20395 V LibUsbDevice: construct(pointer=0x8c92b900)
+12-01 21:28:25.160 20269 20395 D UvcDevice: open()...
+12-01 21:28:26.036 20269 20395 D Uvc     : [jni_device.cpp:50] Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDevice_nativeSetUsbDeviceInfo()...
+12-01 21:28:26.036 20269 20395 D Uvc     : [jni_device.cpp:50] ...Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDevice_nativeSetUsbDeviceInfo()
+12-01 21:28:26.037 20269 20395 D Uvc     : [jni_device.cpp:233] Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDevice_nativeOpenDeviceHandle()...
+12-01 21:28:26.037 20269 20395 V Uvc     : API: Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDevice_nativeOpenDeviceHandle: enter...
+12-01 21:28:26.037 20269 20395 D Uvc     : [device.cpp:279] uvc_open()...
+12-01 21:28:26.037 20269 20395 D Uvc     : [libuvc/libuvc_internal.h:356] uvc_device::open()...
+12-01 21:28:26.037 20269 20395 D libusb  : [35.266630] [00004fab] libusb: debug [op_open] op_open: szUsbPath=/dev/bus/usb/001/006
+12-01 21:28:26.037 20269 20395 D libusb  : [35.266857] [00004fab] libusb: debug [op_open] late acquiring descriptors for /dev/bus/usb/001/006
+12-01 21:28:26.037 20269 20395 D Uvc     : [libuvc/libuvc_internal.h:375] acquired vid=1133 & pid=2277
+12-01 21:28:26.037 20269 20395 D Uvc     : [libuvc/libuvc_internal.h:356] ...uvc_device::open() rc=0
+12-01 21:28:26.038 20269 20395 D Uvc     : [device.cpp:295] calling libusb_reset_device()...
+12-01 21:28:27.470 20269 20395 D Uvc     : [device.cpp:303] ...libusb_reset_device() called
+12-01 21:28:27.470 20269 20395 D Uvc     : [device.cpp:311] libusb_open() = 0
+12-01 21:28:27.470 20269 20395 D Uvc     : [libuvc/libuvc_internal.h:732] uvc_device_handle::uvc_device_handle()...
+12-01 21:28:27.470 20269 20395 D Uvc     : [libuvc/libuvc_internal.h:732] ...uvc_device_handle::uvc_device_handle()
+12-01 21:28:27.470 20269 20395 D Uvc     : [device.cpp:386] uvc_get_device_info()...
+12-01 21:28:27.470 20269 20395 D libusb  : [36.699630] [00004fab] libusb: debug [op_get_config_descriptor] op_get_config_descriptor: config_index=0
+12-01 21:28:27.470 20269 20395 D libusb  : [36.699772] [00004fab] libusb: debug [op_get_config_descriptor] op_get_config_descriptor: config_index=0
+12-01 21:28:27.470 20269 20395 D Uvc     : [device.cpp:986] uvc_scan_control()...
+12-01 21:28:27.470 20269 20395 D Uvc     : [device.cpp:1041] uvc_parse_vc_header()...
+12-01 21:28:27.470 20269 20395 D Uvc     : [device.cpp:1284] uvc_scan_streaming()...
+12-01 21:28:27.470 20269 20395 D Uvc     : [device.cpp:1340] uvc_parse_vs_input_header()...
+12-01 21:28:27.470 20269 20395 D Uvc     : [device.cpp:1340] ...uvc_parse_vs_input_header() rc=0
+12-01 21:28:27.471 20269 20395 D Uvc     : [device.cpp:1389] uvc_parse_vs_format_uncompressed()...
+12-01 21:28:27.471 20269 20395 D Uvc     : [device.cpp:1389] ...uvc_parse_vs_format_uncompressed() rc=0
+12-01 21:28:27.471 20269 20395 V Uvc     : [device.cpp:1630] unsupported descriptor subtype: 13 UVC_VS_COLORFORMAT
+12-01 21:28:27.471 20269 20395 D Uvc     : [device.cpp:1449] uvc_parse_vs_format_mjpeg()...
+12-01 21:28:27.471 20269 20395 D Uvc     : [device.cpp:1449] ...uvc_parse_vs_format_mjpeg() rc=0
+12-01 21:28:27.472 20269 20395 V Uvc     : [device.cpp:1630] unsupported descriptor subtype: 13 UVC_VS_COLORFORMAT
+12-01 21:28:27.472 20269 20395 D Uvc     : [device.cpp:1284] ...uvc_scan_streaming() rc=0
+12-01 21:28:27.472 20269 20395 D Uvc     : [device.cpp:1041] ...uvc_parse_vc_header() rc=0
+12-01 21:28:27.472 20269 20395 D Uvc     : [device.cpp:1083] uvc_parse_vc_input_terminal()...
+12-01 21:28:27.472 20269 20395 D Uvc     : [device.cpp:1083] ...uvc_parse_vc_input_terminal() rc=0
+12-01 21:28:27.472 20269 20395 D Uvc     : [device.cpp:1156] uvc_parse_vc_processing_unit()...
+12-01 21:28:27.472 20269 20395 D Uvc     : [device.cpp:1156] ...uvc_parse_vc_processing_unit() rc=0
+12-01 21:28:27.472 20269 20395 D Uvc     : [device.cpp:986] ...uvc_scan_control() rc=0
+12-01 21:28:27.472 20269 20395 D Uvc     : [device.cpp:386] ...uvc_get_device_info() rc=0
+12-01 21:28:27.472 20269 20395 D Uvc     : [device.cpp:326] claiming control interface 0
+12-01 21:28:27.472 20269 20395 D Uvc     : [libuvc/libuvc_internal.h:770] uvc_device_handle::claimInterface(idx=0)...
+12-01 21:28:27.473 20269 20395 D UvcDevice: claimInterface(0)
+12-01 21:28:27.510 20269 20395 D UvcDevice: claimInterface(0) succeeded
+12-01 21:28:27.511 20269 20395 D Uvc     : [libuvc/libuvc_internal.h:783] claimInterface(0) succeeded
+12-01 21:28:27.511 20269 20395 D Uvc     : [libuvc/libuvc_internal.h:770] ...uvc_device_handle::claimInterface() rc=0
+12-01 21:28:27.511 20269 20395 D Uvc     : [device.cpp:279] ...uvc_open() rc=0
+12-01 21:28:27.511 20269 20395 V Uvc     : API: Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDevice_nativeOpenDeviceHandle: ...exit
+12-01 21:28:27.511 20269 20395 D Uvc     : [jni_device.cpp:233] ...Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDevice_nativeOpenDeviceHandle()
+12-01 21:28:27.511 20269 20395 V UvcDeviceHandle: construct(pointer=0x8c609260)
+12-01 21:28:27.512 20269 20395 V CameraImpl: construct(0x056ea55a)
+12-01 21:28:27.513 20269 20395 D UsbResiliantWebcam.InterveningStateCallback: onOpened() camera=CameraImpl(UvcDeviceHandle(pointer=0x8c609260|UvcDevice(/dev/bus/usb/001/006)))...
+12-01 21:28:27.513 20269 20395 D UsbResiliantWebcam: changeDelegatedCamera(null->CameraImpl(UvcDeviceHandle(pointer=0x8c609260|UvcDevice(/dev/bus/usb/001/006))))...
+12-01 21:28:27.514 20269 20395 D UvcApiFocusControl: isModeSupported(Auto)...
+12-01 21:28:27.514 20269 20395 D UvcApiFocusControl: ...isModeSupported(Auto): false
+12-01 21:28:27.515 20269 20395 D UvcApiFocusControl: isModeSupported(ContinuousAuto)...
+12-01 21:28:27.515 20269 20395 D UvcApiFocusControl: ...isModeSupported(ContinuousAuto): true
+12-01 21:28:27.515 20269 20395 D UvcApiFocusControl: isModeSupported(Macro)...
+12-01 21:28:27.515 20269 20395 D UvcApiFocusControl: ...isModeSupported(Macro): false
+12-01 21:28:27.515 20269 20395 D UvcApiFocusControl: isModeSupported(Infinity)...
+12-01 21:28:27.515 20269 20395 D UvcApiFocusControl: ...isModeSupported(Infinity): false
+12-01 21:28:27.515 20269 20395 D UvcApiFocusControl: isModeSupported(Fixed)...
+12-01 21:28:27.515 20269 20395 D UvcApiFocusControl: ...isModeSupported(Fixed): true
+12-01 21:28:27.515 20269 20395 D UvcApiFocusControl: isFocusLengthSupported...
+12-01 21:28:27.516 20269 20395 D UvcApiFocusControl: ...isFocusLengthSupported: true
+12-01 21:28:27.516 20269 20395 D UvcApiFocusControl: getMinFocusLength()...
+12-01 21:28:27.516 20269 20395 D UvcApiFocusControl: ...getMinFocusLength(): 0.0
+12-01 21:28:27.516 20269 20395 D UvcApiFocusControl: getMaxFocusLength()...
+12-01 21:28:27.517 20269 20395 D UvcApiFocusControl: ...getMaxFocusLength(): 250.0
+12-01 21:28:27.518 20269 20395 D UvcApiFocusControl: getFocusLength()...
+12-01 21:28:27.519 20269 20395 D UvcDeviceHandle: [jni_devicehandle.cpp:1059] focusLength=0
+12-01 21:28:27.519 20269 20395 D UvcApiFocusControl: ...getFocusLength(): 0.0
+12-01 21:28:27.519 20269 20395 D CachingExposureControl: onCameraChanged(null->CameraImpl(UvcDeviceHandle(pointer=0x8c609260|UvcDevice(/dev/bus/usb/001/006))))...
+12-01 21:28:27.520 20269 20395 D UvcApiExposureControl: isModeSupported(Auto)...
+12-01 21:28:27.521 20269 20395 D UvcApiExposureControl: ...isModeSupported(Auto): false
+12-01 21:28:27.521 20269 20395 D UvcApiExposureControl: isModeSupported(ContinuousAuto)...
+12-01 21:28:27.521 20269 20395 D UvcApiExposureControl: ...isModeSupported(ContinuousAuto): false
+12-01 21:28:27.521 20269 20395 D UvcApiExposureControl: isModeSupported(Manual)...
+12-01 21:28:27.522 20269 20395 D UvcApiExposureControl: ...isModeSupported(Manual): true
+12-01 21:28:27.522 20269 20395 D UvcApiExposureControl: isModeSupported(ShutterPriority)...
+12-01 21:28:27.523 20269 20395 D UvcApiExposureControl: ...isModeSupported(ShutterPriority): false
+12-01 21:28:27.523 20269 20395 D UvcApiExposureControl: isModeSupported(AperturePriority)...
+12-01 21:28:27.523 20269 20395 D UvcApiExposureControl: ...isModeSupported(AperturePriority): true
+12-01 21:28:27.524 20269 20395 D UvcApiExposureControl: isExposureSupported()...
+12-01 21:28:27.524 20269 20395 D UvcApiExposureControl: ...isExposureSupported(): true
+12-01 21:28:27.524 20269 20395 D UvcApiExposureControl: getMinExposure(NANOSECONDS)...
+12-01 21:28:27.524 20269 20395 D Uvc     : [jni_devicehandle.cpp:645] Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDeviceHandle_nativeGetMinExposure()...
+12-01 21:28:27.525 20269 20395 D Uvc     : [jni_devicehandle.cpp:645] ...Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDeviceHandle_nativeGetMinExposure()
+12-01 21:28:27.525 20269 20395 D UvcApiExposureControl: ...getMinExposure(NANOSECONDS): 300000
+12-01 21:28:27.525 20269 20395 D UvcApiExposureControl: getMaxExposure(NANOSECONDS)...
+12-01 21:28:27.525 20269 20395 D UvcApiExposureControl: ...getMaxExposure(NANOSECONDS): 204700000
+12-01 21:28:27.525 20269 20395 D UvcApiExposureControl: setAePriority()...
+12-01 21:28:27.526 20269 20395 D UvcApiExposureControl: ...setAePriority()
+12-01 21:28:27.526 20269 20395 D UvcApiExposureControl: getMode()...
+12-01 21:28:27.526 20269 20395 D Uvc     : [jni_devicehandle.cpp:493] Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDeviceHandle_nativeGetVuforiaExposureMode()...
+12-01 21:28:27.527 20269 20395 D Uvc     : [jni_devicehandle.cpp:493] ...Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDeviceHandle_nativeGetVuforiaExposureMode()
+12-01 21:28:27.527 20269 20395 D UvcApiExposureControl: ...getMode(): AperturePriority
+12-01 21:28:27.528 20269 20395 D CachingExposureControl: ...onCameraChanged(null->CameraImpl(UvcDeviceHandle(pointer=0x8c609260|UvcDevice(/dev/bus/usb/001/006))))
+12-01 21:28:27.528 20269 20395 D UvcApiPtzControl: getMinZoom()...
+12-01 21:28:27.529 20269 20395 D UvcApiPtzControl: ...getMinZoom(): 100
+12-01 21:28:27.529 20269 20395 D UvcApiPtzControl: getMaxZoom()...
+12-01 21:28:27.531 20269 20395 D UvcApiPtzControl: ...getMaxZoom(): 500
+12-01 21:28:27.531 20269 20395 D UvcApiPtzControl: getMinPanTilt()...
+12-01 21:28:27.532 20269 20395 D UvcApiPtzControl: ...getMinPanTilt(): org.firstinspires.ftc.robotcore.external.hardware.camera.controls.PtzControl$PanTiltHolder@84766b9
+12-01 21:28:27.533 20269 20395 D UvcApiPtzControl: getMaxPanTilt()...
+12-01 21:28:27.533 20269 20395 D UvcApiPtzControl: ...getMaxPanTilt(): org.firstinspires.ftc.robotcore.external.hardware.camera.controls.PtzControl$PanTiltHolder@3c94afe
+12-01 21:28:27.534 20269 20395 D UvcApiPtzControl: getZoom()...
+12-01 21:28:27.534 20269 20395 D UvcApiPtzControl: ...getZoom(): 100
+12-01 21:28:27.534 20269 20395 D UvcApiPtzControl: getPanTilt()...
+12-01 21:28:27.535 20269 20395 D UvcApiPtzControl: ...getPanTilt(): org.firstinspires.ftc.robotcore.external.hardware.camera.controls.PtzControl$PanTiltHolder@2825f
+12-01 21:28:27.535 20269 20395 D UvcApiGainControl: getMinGain()...
+12-01 21:28:27.535 20269 20395 D Uvc     : [jni_devicehandle.cpp:894] Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDeviceHandle_nativeGetMinGain()...
+12-01 21:28:27.536 20269 20395 D Uvc     : [jni_devicehandle.cpp:894] ...Java_org_firstinspires_ftc_robotcore_internal_camera_libuvc_nativeobject_UvcDeviceHandle_nativeGetMinGain()
+12-01 21:28:27.536 20269 20395 D UvcApiGainControl: ...getMinGain(): 0
+12-01 21:28:27.537 20269 20395 D UvcApiGainControl: getMaxGain()...
+12-01 21:28:27.537 20269 20395
